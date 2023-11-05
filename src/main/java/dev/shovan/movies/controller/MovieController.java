@@ -28,7 +28,7 @@ public class MovieController {
         return new ResponseEntity<List<Movie>>(movieService.getAllMovies(), HttpStatus.OK);
     }
 
-    @GetMapping("getmovie/{imdbId}")
+    @GetMapping("/getmovie/{imdbId}")
     public ResponseEntity<Optional<Movie>> getMovieByImdbId(@PathVariable String imdbId) {
 
         return new ResponseEntity<Optional<Movie>>(movieService.getMovieByImdbId(imdbId), HttpStatus.OK);
